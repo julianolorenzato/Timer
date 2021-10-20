@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        @keyframes ativado {
+            from {
+                border: 3px solid white;
+                box-shadow: 0 0 0 10px blueviolet,
+                            8px 8px 15px 3px;
+            } to {
+
+                box-shadow: 0 0 0 20px blueviolet,
+                            18px 18px 25px 13px;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .container {
+            border-radius: 20px;
+            background-color: blueviolet;
+            position: absolute;
+            top: 20vh;
+            left: 20%;
+            height: 60vh;
+            width: 60%;
+            border: 3px solid white;
+            outline-color: blueviolet;
+            box-shadow: 0 0 0 10px blueviolet,
+                        8px 8px 15px 3px;
+        }
+
+        .timer {
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 60pt;
+            font-family: JetBrains Mono;
+            font-weight: 1000;
+        }
+
+        .btn {
+            background-color: white;
+            height: 70px;
+            width: 70px;
+            font-family: JetBrains Mono;
+            box-shadow: 3px 3px 3px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .btn:hover {
+            background-color: rgb(60, 0, 83);
+            color: white;
+            box-shadow: 3px 3px 3px black;
+        }
+
+        .btn:active {
+            box-shadow: none;
+            position: relative;
+            top: 3px;
+            left: 3px;
+        }
+
+        .btn-container {
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translateX(-50%);
+        }
+
+        .animacoes {
+            animation: ativado 1s infinite alternate;
+        }
+
+        .madeby {
+            font-size: 14pt;
+            font-family: JetBrains Mono, sans-serif;
+            text-align: center;
+            position: relative;
+            top: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="timer">00:00:00</span>
+        <div class="btn-container">
+            <input type="button" value="Iniciar" class="btn" id="iniciar">
+            <input type="button" value="Pausar" class="btn" id="pausar">
+            <input type="button" value="Zerar" class="btn" id="zerar">
+        </div>
+    </div>
+    <div class="madeby">Made by Juliano Lorenzato</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
